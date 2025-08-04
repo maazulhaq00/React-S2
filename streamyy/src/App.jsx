@@ -3,7 +3,7 @@ import Movies from "./components/Movies";
 function App() {
   return ( 
     <>
-    <h1>Welcome to Streamyy</h1>
+    <h3 className="text-center my-4">Welcome to Streamyy</h3>
     <Movies />
     </>
    );
