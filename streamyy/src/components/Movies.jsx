@@ -1,5 +1,6 @@
 
 import moviesData from '../data/moviesData.json'
+import MovieCard from './MovieCard';
 
 
 function Movies() {
@@ -22,22 +23,9 @@ function Movies() {
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 {
                     moviesData.map((movie) => {
-                        return (<div className="col">
-                            <div className="card">
-                                <img src={movie.img_url} className="card-img-top" alt={movie.description} />
-                                <div className="card-body">
-                                    <h5 className="card-title">{movie.name}</h5>
-
-                                    <p className="card-text">
-                                        {movie.description}
-                                    </p>
-                                    <p><b>Rating:</b> {movie.rating}</p>
-                                    <p><b>Cast:</b> {movie.cast}</p>
-                                    <p><b>Genre:</b> {movie.genre}</p>
-                                    <a href={movie.watch_url} target="_blank" class="btn btn-dark">Watch Now</a>
-                                </div>
-                            </div>
-                        </div>)
+                        return (
+                            <MovieCard  data={movie} /> 
+                        )
                     })
                 }
             </div>
