@@ -1,0 +1,19 @@
+*{
+    /* background-color: rgb(178, 233, 233) !important; */
+}
+
+.mynewcontainer {
+    margin: 40px;
+}
+
+.mynewcontainer ul li {
+    background-color: rgb(209, 242, 255);
+} 
+
+
+.older-people {
+    background-color: rgb(173, 216, 173) !important;
+}
+.younger-people {
+    background-color: rgb(246, 200, 255) !important;
+}

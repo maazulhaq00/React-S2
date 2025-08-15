@@ -1,25 +1,38 @@
+
+import "./StudentDetails.css"
+
 function StudentDetails(props) {
 
-    console.log(props);
-    
+    const myHeadingStyle = {
+        color: 'white',
+        backgroundColor: 'rgb(12, 0, 39)'
+    }
+
+    // console.log(props);
+    let {name, email, contact,standard,age, subjects} = props
     return (
 
-        <div className="m-4">
+        <div className="mynewcontainer">
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">
-                    <b>Name: {props.name}</b>
+                <li className="list-group-item" style={myHeadingStyle}>
+                    <b>Name: {name}</b>
                 </li>
                 <li className="list-group-item">
-                    Email: {props.email}
+                    Email: {email}
                 </li>
                 <li className="list-group-item">
-                    Contact: {props.contact}
+                    Contact: {contact}
+                </li>
+                <li className={`list-group-item ${age > 18 ? 'older-people': 'younger-people'}`} 
+                // style={{backgroundColor: age > 18 ? 'rgb(173, 216, 173)' : 'rgb(246, 200, 255)'}}
+                >
+                    Age: {age}
                 </li>
                 <li className="list-group-item">
-                    Class: {props.standard}
+                    Class: {standard}
                 </li>
-                <li className="list-group-item">
-                    Subjects: {props.subjects}
+                <li className="list-group-item" >
+                    Subjects: {subjects}
                 </li>
             </ul>
         </div>
