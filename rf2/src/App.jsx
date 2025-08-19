@@ -6,7 +6,9 @@ import CounterPage from './pages/CounterPage'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import NavBar from './components/NavBar'
-import AddStudent from './pages/AddStudent'
+// import AddStudent from './pages/AddStudent'
+import AddStudent2 from './pages/AddStudent2'
+import StudentDetails from './pages/StudentDetails'
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/counter' element={<CounterPage />} />
-          <Route path='/addstudent' element={<AddStudent />} />
+          <Route path='/addstudent' element={<AddStudent2 />} />
+          <Route path='/student' element={<StudentDetails />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
