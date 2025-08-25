@@ -23,7 +23,15 @@ function AddStudent2() {
     }
 
     function handleClick(){
-        navigate("/student")
+        if(student.fullname != ""){
+            navigate(`/student`,{
+                state: {
+                    ...student
+                }
+            })
+        }else{
+           alert("Full Name Required") 
+        }
     }
 
     return (

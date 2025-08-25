@@ -16,6 +16,9 @@ function NavBar() {
         <li>
           <Link to="/addstudent" >Add Student</Link>
         </li>
+        <li>
+          <Link to="/users" >Users</Link>
+        </li>
       </ul>
     </>
   );

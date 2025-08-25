@@ -9,6 +9,7 @@ import NavBar from './components/NavBar'
 // import AddStudent from './pages/AddStudent'
 import AddStudent2 from './pages/AddStudent2'
 import StudentDetails from './pages/StudentDetails'
+import UserAPI from './pages/UsersApi'
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
           <Route path='/about' element={<AboutPage />} />
           <Route path='/counter' element={<CounterPage />} />
           <Route path='/addstudent' element={<AddStudent2 />} />
+          {/* <Route path='/student/:name' element={<StudentDetails />} /> */}
           <Route path='/student' element={<StudentDetails />} />
+          <Route path='/users' element={<UserAPI />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
