@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function UserAPI() {
 
-    let { users, setUsers } = useState([]);
+    let [users, setUsers] = useState([]);
 
     useEffect(() => {
 
@@ -12,9 +12,8 @@ function UserAPI() {
             })
             .then((data) => {
                 console.log(data);
+                setUsers(data)
             })
-        
-
     }, [])
 
 
@@ -22,6 +21,31 @@ function UserAPI() {
     return (
         <>
             <h3>Users</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>City</th>
+                    <th>Company Name</th>
+                </tr>
+                {
+                    users.map((user) => {
+
+                        return (
+                            <tr>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.phone}</td>
+                                <td>{user.address.city}</td>
+                                <td>{user.company.name}</td>
+                            </tr>
+                        )
+
+                    })
+                }
+
+            </table>
         </>
     )
 }
